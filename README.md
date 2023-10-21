@@ -1,1 +1,1 @@
-# Product-Card---GUCCHI
+# Product-Card-GUCCHI miniProject
