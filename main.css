@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-family: pop;
+}
+@font-face {
+  font-family: pop;
+  src: url(./media/Poppins-Regular_2.woff);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #212121;
+}
+
+div.card {
+  position: relative;
+  width: 420px;
+  height: 580px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #088418;
+  transform: skewY(345deg);
+  transition: all 500ms linear;
+}
+
+div.card:hover::before {
+  top: -60%;
+  transform: skewY(375deg);
+}
+
+div.card::after {
+  content: "GUCCHI";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-weight: bold;
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.1);
+}
+div.card > div.imgBox {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+div.card > div.imgBox > img {
+  width: 380px;
+  margin-top: 180px;
+  object-fit: cover;
+  transition: all 500ms linear;
+}
+div.card:hover > div.imgBox > img {
+  transform: translateY(-60px);
+}
+
+div.card > div.contentBox {
+  width: 360px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  z-index: 2;
+  opacity: 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+div.card > div.contentBox > p {
+  font-size: 14px;
+  color: white;
+  margin: 15px 0;
+  user-select: none;
+}
+div.card > div.contentBox > p > span {
+  font-weight: bold;
+  width: 50px;
+  height: 30px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 6px;
+  margin-left: 10px;
+  font-size: 16px;
+  color: black;
+}
+div.card > div.contentBox a {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: white;
+  border-radius: 30px;
+  transition: all 300ms linear;
+  font-size: 18px;
+  border: 2px solid white;
+}
+div.card > div.contentBox a:hover {
+  background: #088418;
+  color: white;
+  scale: 1.1;
+}
+div.card:hover > div.contentBox {
+  opacity: 1;
+  transform: translateY(-10%);
+  transition-duration: 800ms;
+  transform-origin: bottom;
+}
+div.size {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+}
+
+div.size h3 {
+  color: white;
+  font-size: 14px;
+  margin-right: 10px;
+  user-select: none;
+}
+div.size > span {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background: #fff;
+  margin: 0 7px;
+  transition: all 300ms linear;
+  color: black;
+  border-radius: 6px;
+  user-select: none;
+  cursor: pointer;
+}
+div.size > span:hover {
+  scale: 1.2;
+  border: 2px solid red;
+  outline: 3px solid #088418;
+}
+div.size > span.one {
+  box-shadow: 5px 5px 5px black;
+}
+div.size > span.one {
+  box-shadow: 5px 5px 5px black;
+}
+div.size > span.two {
+  box-shadow: 5px 5px 5px black;
+}
+div.size span.three {
+  box-shadow: 5px 5px 5px black;
+}
+div.size span.four {
+  box-shadow: 5px 5px 5px black;
+}
+
